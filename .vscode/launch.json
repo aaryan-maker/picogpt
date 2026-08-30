@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "download weights",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/download_weights.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "run: generate",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run.py",
+      "args": ["Once upon a time", "-n", "30", "-t", "0.8", "--top-k", "40"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "benchmark",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/benchmarks/bench.py",
+      "args": ["--new-tokens", "48", "--reps", "4", "--plot", "--int8"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "check vs Hugging Face",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/check_reference.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "profile forward (decode step)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/profile_forward.py",
+      "args": ["--cache", "--tokens", "32"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

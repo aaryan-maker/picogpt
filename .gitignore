@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.weights/
+weights/
+*.safetensors
+.pytest_cache/
+.DS_Store
+benchmarks/results/*.json
+benchmarks/results/bench-*.png
